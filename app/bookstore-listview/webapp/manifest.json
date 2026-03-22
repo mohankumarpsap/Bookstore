@@ -129,7 +129,12 @@
             "settings": {
               "editableHeaderContent": false,
               "contextPath": "/Books",
-              "sectionLayout": "Page"
+              "sectionLayout": "Page",
+              "content": {
+                "header": {
+                  "visible": true
+                }
+              }
             }
           }
         }

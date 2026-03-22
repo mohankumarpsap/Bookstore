@@ -5,6 +5,21 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
+                Value : tutorialitle,
+                Label : 'Title',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : stock,
+                Label : 'Stock',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : genre,
+                Label : 'Genre',
+            },
+            {
+                $Type : 'UI.DataField',
                 Label : 'Published At',
                 Value : publishedAt,
             },
@@ -53,13 +68,13 @@ annotate service.Books with @(
         },
         {
             $Type : 'UI.DataField',
-            Label : 'Price',
-            Value : price,
+            Value : stock,
+            Label : 'Stock',
         },
         {
             $Type : 'UI.DataField',
-            Value : stock,
-            Label : 'Stock',
+            Label : 'Price',
+            Value : price,
         },
         {
             $Type : 'UI.DataField',
@@ -206,4 +221,8 @@ annotate service.BookStatus with {
         Common.Text : displaytext,
         Common.Text.@UI.TextArrangement : #TextOnly,
 )};
+
+annotate service.Books with {
+    tutorialitle @UI.MultiLineText : true
+};
 
