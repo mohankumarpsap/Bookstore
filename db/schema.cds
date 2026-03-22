@@ -12,7 +12,7 @@ entity Books : cuid, managed {
         publishedAt  : Date;
         pages        : Integer;
         price        : Decimal(9, 2);
-        Chapters     : Composition of Chapters
+        Chapters     : Composition of many Chapters
                                on Chapters.book = $self;
 }
 
@@ -29,6 +29,9 @@ entity Authors : cuid, managed {
  * Composition
  */
 entity Chapters : cuid, managed {
-            number : Integer;
         key book   : Association to Books;
+            number : Integer;
+            title  : String;
+            pages  : Integer;
+
 }
