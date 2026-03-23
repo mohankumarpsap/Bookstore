@@ -38,6 +38,11 @@ annotate service.Books with @(
                 Value : status_code,
                 Criticality : status.criticality,
             },
+            {
+                $Type : 'UI.DataField',
+                Value : currency_code,
+                Label : 'currency_code',
+            },
         ],
     },
     UI.Facets : [
@@ -224,5 +229,9 @@ annotate service.BookStatus with {
 
 annotate service.Books with {
     tutorialitle @UI.MultiLineText : true
+};
+
+annotate service.Books with {
+    currency @Common.ValueListWithFixedValues : true
 };
 
